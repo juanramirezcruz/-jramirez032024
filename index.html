@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Ramirez - Portfolio</title> 
+
+        <style>
+        /* Mobile First Design */
+            :root
+            {
+                --color-primary: #162c60;
+                --color-secondary: #093177;
+                --color-tertiary: #204791;
+            }
+
+            html
+            {
+                scroll-behavior: smooth;
+            }
+
+            body   
+            {
+                font-family:var (--font-primary);
+                padding:0;
+                /* margin:0; */
+            }
+
+            .container
+            {
+                background-color: #590105;
+                min-height:10rem;
+                max-width:75rem;
+                padding:1rem 3rem 1rem 3rem;
+                margin:auto;
+                border-radius:35px;
+                border:5px solid white;
+            }
+
+            #pageheader 
+            {
+                background-color: #590105;
+                min-height:200px;
+                padding:1rem;
+            }
+
+
+
+            #pagenav    
+            {
+                background-color: #193473;
+                min-height:30px;
+                padding:1rem;
+                text-align: center;
+                color: white;
+            }
+
+            #pagenav a 
+            {
+                color: white;
+            }
+
+            #pagenav a:hover
+            {
+                color: #8f363c;
+            }
+
+            #logo
+            {
+                background-color: red;
+                width:150px;
+                height:150px;
+                border-radius: 50%;
+                background-image: url(Images/logo.jpg); 
+                background-size:cover;
+                border:5px solid white;
+                position:absolute;
+                left:calc(50% - 75px);
+                transition: all 2s;
+                background-repeat: no-repeat;
+                background-position: center center;
+                animation:spin 3s infinite linear;
+            }
+
+            @keyframes spin 
+            {
+                100%{transform: rotate(1turn);}
+            }
+
+            #media
+            {
+                background-color: #16293d;
+                min-height:350px;
+                padding:1rem;
+                background-image: url(Images/spiderman.jpg);
+                background-size:cover;
+                background-position: center top;
+                transition: 2s;
+            }
+
+            #career
+            {
+                background-color: #334f71;
+                min-height:200px;
+                padding:1rem;
+                color:white;
+            }
+
+            #career .container:hover
+            {
+                box-shadow:0px 10px 30px 10px #99c0d7;
+                transition: 0.6s;
+                transform: translateY(-15px);
+            }
+
+            #career a
+            {
+                color:white;
+            }
+
+            #career a:hover
+            {
+                color:#82a7c0;
+            }
+
+            #introduction
+            {
+                background-color:var(--color-primary);
+                min-height:200px;
+                padding:1rem;
+                color:white;
+            }
+
+            #introduction .container:hover
+            {
+                box-shadow:0px 10px 30px 10px #99c0d7;
+                transition: 0.6s;
+                transform: translateY(-15px);
+            }
+
+            #keyassignments
+            {
+                background-color:var(--color-primary);
+                min-height:200px;
+                padding:1rem;
+                color:white;
+
+            }
+
+            #keyassignments .container:hover
+            {
+                box-shadow:0px 10px 30px 10px #99c0d7;
+                transition: 0.6s;
+                transform: translateY(-15px);
+            }
+
+
+            #semester2
+            {
+                background-color:var(--color-primary);
+                min-height:200px;
+                padding:1rem;
+                color:white;
+            }
+
+            #semester2 .container:hover
+            {
+                box-shadow:0px 10px 30px 10px #99c0d7;
+                transition: 0.6s;
+                transform: translateY(-15px);
+            }
+
+            #semester2 a
+            {
+                color:white;
+            }
+
+            #semester2 a:hover
+            {
+                color:#82a7c0;
+            }
+
+            #pagefooter
+            {
+                background-color:var(--color-secondary);
+                min-height:200px;
+                padding:1rem;
+                text-align: center;
+                color: white;
+            }
+
+            #pagefooter a
+            {
+                color: white;
+            }
+
+            #pagefooter a:hover
+            {    
+                color:#82a7c0;
+            }
+
+            #pagefooter .container:hover
+            {
+                box-shadow:0px 10px 30px 10px #99c0d7;
+                transition: 0.6s;
+                transform: translateY(-15px);
+            }
+
+            #subfooter
+            {
+                background-color:var(--color-tertiary);
+                min-height:200px;
+                padding:1rem;
+                color:white;
+            }
+
+            #subfooter .container:hover
+            {
+                box-shadow:0px 10px 30px 10px #99c0d7;
+                transition: 0.6s;
+                transform: translateY(-15px);
+            }
+
+            #topanchor
+            {
+                height:25px;
+                width: 25px;
+                padding: 1rem;
+                border: 2px solid white;
+                border-radius: 50%;
+                position: fixed;
+                right: 20px;
+                bottom:20px;
+                background-color: #590105;
+            
+            }
+ 
+            #topanchor a
+            {
+                color: white;
+            }
+            #topanchor a:hover
+            {    
+                color:#82a7c0;
+            }
+
+            #footerlinks
+            {
+                display:none;
+            }
+            #footerlinks a
+            {
+                color:white;
+            }
+            #footerlinks a:hover
+            {    
+                color:#82a7c0;
+            }
+
+        /* Table and Desktop Styles */
+        /* Use media queries to detect browser window size */
+
+            @media screen and (min-width:321px)
+            {
+                #career 
+                {
+                    background-color: #1e1c1b;
+                }
+            }
+
+            @media screen and (min-width:480px)
+            {
+                #career
+                {
+                    background-color: #204791;
+                }
+            }
+
+            @media screen and (min-width:768px)
+            {
+                #flexsubfooter
+                {
+                    display: flex;
+                    justify-content: space-between;
+                }
+                #career 
+                {
+                    background-color:  #093177;
+                }
+                #footerlinks
+                {
+                    display:block;
+                }
+
+            @media screen and (min-width:1024px)
+            {
+                #career
+                {
+                    background-color:#162c60;
+                }
+                #logo
+                { 
+                    left :25px;
+                }
+            }
+
+            @media screen and (min-width:1200px)
+            {
+                #career 
+                {
+                    background-color: #08255e;
+                }
+                #logo   
+                {
+                    left :25px; 
+                }
+                #media 
+                {
+                    height: 600px;
+                }
+            }
+            }
+        </style>
+
+</head>
+    <body>
+    <!-- Named Anchor to navigate to the top -->
+        <a name="top"></a>
+
+    <!-- begin pageheader -->
+        <header id="pageheader">
+            <!-- <div class="container"> -->
+                <div id="logo"></div>
+                <div id="spiderman"></div>
+            </div>
+        </header>
+    <!-- end pageheader -->
+
+    <!-- begin pagenav -->
+        <nav id="pagenav">
+            <a href="#career">Career</a> 
+            | 
+            <a href="#semester2">Semester 2</a>
+            |
+            <a href="#keyassignments">Key Assignments</a>
+        </nav>
+    <!-- end pagenav -->
+
+    <!-- begin media -->
+        <section   section id="media"></section>
+    <!-- end media -->
+
+    <!-- begin career -->
+        <section id="career">
+            <div class="container">
+                <a name="Career"></a>
+                <h2>Career</h2>
+                <ul>
+                    <li><a href="Career/Letter of Introduction.pdf" target="new">Letter of Introduction</a></li>
+                    <li><a href="Career/Resume.pdf" target="new">Resumé</a></li>
+                    <li><a href="Career/References.pdf" target="new">References</a></li>
+                    <li><a href="Career/Career Plan.pdf" target="new">Career Plan</a></li>
+                    <li><a href="Career/Job Application.pdf" target="new">Job Application</a></li>
+                </ul>  
+            </div>
+        </section>
+    <!-- end career -->
+
+    <!-- begin pagecontent -->
+        <main id="introduction">
+            <div class="container">
+                <h2>Introduction</h2>
+                <main id="pagemain">  
+                    <p>
+                        Welcome to my Portfolio! My name is Juan Ramirez and this is my second year in the technology pathway at CHS. I am also a TA for Mr. Chagoyan and we maintain the Coalinga High School webpage. I like to spend time with my friends and family. I also like to play sports like soccer, basketball, and wrestling. My favorite school subject is Math and my least favorite school subject is English. I like to hangout with my friends and listen to music. I am a Senior in Coalinga High School hoping to become a Civil Engineer in the future. I chose this theme for my Portfolio because Spiderman is my favorite fictional character of all time.
+                    </p>
+            </div>
+        </main>
+    <!-- end pagecontent -->
+
+
+    <!-- begin semester2 -->
+        <section id="semester2">
+            <div class="container">
+                <a name="semester2"></a>
+                <h2>Semester2</h2>
+            </div>
+        </section>
+    <!-- end semester2 -->
+    
+        <!-- begin keyassignments -->
+        <div id="keyassignments">
+            <div class="container">
+                <h2>Key Assignments</h2>
+                <a href="keyassignments"></a> 
+                    <p>
+                        Welcome to my Portfolio! My name is Juan Ramirez and this is my second year in the technology pathway at CHS. I am also a TA for Mr. Chagoyan and we maintain the Coalinga High School webpage. I like to spend time with my friends and family. I also like to play sports like soccer, basketball, and wrestling. My favorite school subject is Math and my least favorite school subject is English. I like to hangout with my friends and listen to music. I am a Senior in Coalinga High School hoping to become a Civil Engineer in the future. I chose this theme for my Portfolio because Spiderman is my favorite fictional character of all time.
+                    </p>
+            </div>
+        </div>
+    <!-- end keyassignments -->
+
+    <!-- begin pagefooter -->
+        <footer id="pagefooter">
+            <div class="container">
+                <h2>Navigation</h2>
+
+                <a href="https://chsserver01.org/" target="new">chago</a> |
+
+                <a href="https://www.adobe.com/home" target="new">color schemes</a> |
+
+                <a href="https://coalingahuron.aeries.net" target="new">aeries</a> |
+
+                <a href="https://chs.chusd.org/" target="new">chs</a> |
+
+                <a href="https://classroom.google.com/h" target="new">classroom</a> |
+
+                <a href="https://codepip.com/" target="new">codepip</a> |
+
+                <a href="https://app.minga.io/landing/email" target="new">minga</a> |
+            </div>
+        </footer>
+    <!-- end pagefooter -->
+
+    <!-- begin subfooter -->
+        <footer id="subfooter">
+            <div class="container">
+
+ <div id ="flexsubfooter">
+                <div id="quote">
+                    <h3>Final Thoughts</h3>
+                        <blockquote>
+                            When I was young, I thought that money was the most important thing in life; now that I am older, I know that it is.
+                        </blockquote>
+                        <p>- Oscar Wilde</p>
+                </div>
+    
+    
+                <div id="footerlinks">              
+                    <h3>Navigation</h3>
+                        <ul>
+                            <li><a href="#Career">Career</a></li>
+                            <li><a href="semester2">Semester 2</a></li>
+                            <li><a href="keyassignments">Key Assignments</a></li>
+                        </ul>
+                </div>
+ </div>
+            </div>
+        </footer>
+    <!-- end subfooter -->
+
+        <div id="topanchor">
+            <a href="#top">Top</a>
+        </div>
+    </body>
+</html>

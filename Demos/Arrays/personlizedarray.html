@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays for Each</title>
+</head>
+<body>
+    <h1>Arrays for Each</h1>
+    <script>
+        // Arrays 
+        // Cycle through array elements
+
+        let myFamily;
+        myFamily = [] // Blank array
+        myFamily [0] = "Josue" // index 0
+        myFamily [1] = "Estacy" // index 1
+        myFamily [2] = "Israel" // index 2
+        myFamily [3] = "Gladis" // index 3
+        myFamily [4] = "Daisy" // index 4
+        myFamily [5] = "Mia" // index 5
+        myFamily [6] = "Starling" // index 6
+        myFamily [7] = "Oliver" // index 7
+        myFamily [8] = "Juan" // index 8
+        myFamily [9] = "Max" // index 9
+
+
+        // Display
+        window.document.write(myFamily);
+
+        // Manipulate the array
+        myFamily.push("Josue");
+        myFamily.push("Estacy");
+
+        // Display
+        console.log(myFamily);
+
+        // Correct error 
+        myFamily.pop(); // Delete Fido last element
+        myFamily.shift(); // Delete Fluffy last element
+
+        // Manipulate the array
+        myFamily.unshift('Oliver');
+
+        // Display # of elements in an array
+        console.log(myFamily.length);
+
+        /*
+        Multi line coment - Notes
+
+        forEach allows you to cycle through an array
+
+        myCats.forEach();
+        myCats.forEach( function(){} );
+        myCats.forEach( function(cat){code} );
+
+        Example:
+
+        myCats.forEach( function(cat)
+        {
+        
+        console.log("I love" = cat);
+
+        }   )
+
+        */
+    
+        myFamily.forEach( function(cousin)
+        {
+            console.log(cousin + " is my cousin");
+        } );
+
+        myFamily.forEach( function(c)
+        {
+            console.log("I'm related to " + c);
+        } );
+
+        myFamily.forEach( function(cn, index)
+        {
+            window.alert(cn + " is index " + index);
+        } );
+    </script>
+</body>
+</html>
