@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Areas</title>
+    <style>
+        body
+        {
+            background-color: yellow;
+            padding-top: 1rem;
+        }
+        #container
+        {
+            padding-top: 5rem;
+            max-width:1200px;
+            width: 80%;
+            background-color: purple;
+            margin:auto;
+            border:1px solid black;
+        }
+        #wrapper
+        {
+            background-color: green;
+            width: 80%;
+            margin: auto;
+            display: grid;  
+            gap: 10px;
+            grid-template-areas:
+            "hea hea hea hea"
+            "nav nav nav nav"
+            "med med med med"
+            "mai mai mai mai"
+            "asi asi asi asi"
+            "car1 car1 car1 car1"
+            "car2 car2 car2 car2"
+            "car3 car3 car3 car3"
+            "foo foo foo foo"
+            "sub sub sub sub"
+            ;
+        }
+        header
+        {
+            background-color: orange;
+            min-height: 7rem;
+            padding: 1rem;
+            grid-area: hea;
+        }
+        nav
+        {
+            background-color: aqua;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area: nav;
+        }
+        #intromedia
+        {
+            background-color: lime;
+            min-height: 15rem;
+            padding: 1rem;
+            grid-area: med;
+        }
+        main
+        {
+            background-color: white;
+            min-height: 15rem;
+            padding: 1rem;
+            grid-area: mai;
+        }
+        aside
+        {
+            background-color: teal;
+            min-height: 20rem;
+            padding: 1rem;
+            grid-area: asi;
+        }
+        #card001
+        {
+            background-color: coral;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area: car1;
+        }
+        #card002
+        {
+            background-color: lightblue;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area: car2;
+        }
+        #card003
+        {
+            background-color: lightgreen;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area: car3;
+        }
+        footer
+        {
+            background-color: gold;
+            min-height: 2rem;
+            padding: 1rem;
+            grid-area: foo;
+        }
+        footer#pagedetails
+        {
+            background-color: silver;
+            min-height: 15rem;
+            padding: 1rem;
+            grid-area: sub;
+        }
+        @media screen and (min-width:760px)
+{
+    #wrapper
+        {
+            background-color: green;
+            width: 80%;
+            margin: auto;
+            display: grid;  
+            gap: 10px;
+            grid-template-areas:
+            "hea hea hea hea"
+            "nav nav nav nav"
+            "med med med med"
+            "mai mai mai asi"
+            "car1 car2 car3 car3"
+            "foo foo foo foo"
+            "sub sub sub sub"
+            ;
+}
+
+}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="wrapper">
+            
+            <header id="pageheader">#pageheader</header>
+
+            <nav id="mainnav">#mainnav</nav>
+            
+            <div id="intromedia">#intromedia</div>
+            
+            <main id="pagemain">#pagemain</main>
+            
+            <aside id="pageaside">#pageaside</aside>
+
+            <section id="card001">#card001</section>
+
+            <section id="card002">#card002</section>
+
+            <section id="card003">#card003</section>
+            
+            <footer id="pagefooter">#pagefooter</footer>
+            
+            <footer id="pagedetails">#pagedetails</footer>
+
+            </div>
+        </div>
+</body>
+</html>
