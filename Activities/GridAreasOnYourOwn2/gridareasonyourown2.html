@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            background-color:yellow;
+            padding-top: 1rem;
+        }
+
+        #container{
+            background-color:purple ;
+            max-width: 1200px;
+            width: 80%;
+            gap: 10px;
+            margin: auto;
+        }
+
+    #wrapper{
+        padding: 1rem;
+        display: grid;
+        margin: auto;
+        width: 80%;
+        gap: 5px;
+       grid-template-areas:
+        "hea hea hea"
+        "int int int"
+        "nav nav nav"
+        "pag pag pag"
+        "ca1 ca1 ca1"
+        "ca2 ca2 ca2"
+        "foo foo foo"
+        "det det det"
+       
+       ;
+    }
+
+    #pageheader{
+        padding: 1rem;
+        min-height: 200px;
+        background-color: orange;
+        grid-area: hea;
+    }
+
+    #mainnav{
+        padding: 1rem;
+        min-height: 200px;
+        background-color: aqua;
+        grid-area: nav;
+    }
+    #intromedia{
+        background-color: lime;
+        padding: 1rem;
+        min-height:300px ;
+        grid-area: int;
+    }
+
+     #pagemain{
+        background-color: white;
+         padding: 1rem;
+         min-height: 300px;
+         grid-area: pag;
+        }
+
+    #card001{
+        background-color: coral;
+        padding: 1rem;
+        min-height:150px;
+        grid-area: ca1;
+    }
+    #card002{
+        background-color: lightblue;
+        padding: 1rem;
+        min-height:150px;
+        grid-area: ca2;
+    }
+
+    #pagefooter{
+        background-color: gold;
+        padding: 1rem;
+        min-height: 200px;
+        grid-area: foo;
+    }
+    #pagedetails{
+        background-color: silver;
+        min-height: 300px;
+        padding: 1rem;
+        grid-area: det;
+    }
+
+    @media screen and (min-width: 768px)
+    {
+        #wrapper{
+       grid-template-areas:
+        "hea hea hea"
+        "int int int"
+        "nav pag pag"    
+        "nav ca1 ca2"
+        "foo foo foo "
+        "det det det"
+       
+     ;  
+    }
+    }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="wrapper">
+            <header id="pageheader">pageheader</header>
+            <nav id="mainnav">mainnav</nav>
+            <div id="intromedia">intromedia</div>
+            <main id="pagemain">pagemain</main>
+            <section id="card001">card001</section>
+            <section id="card002">card002</section>
+            <footer id="pagefooter">pagefooter</footer>
+            <footer id="pagedetails">pagedetails</footer>
+
+
+        </div>
+
+
+
+
+    </div>
+</body>
+</html>
