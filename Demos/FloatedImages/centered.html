@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centered Images</title>
+    <title>Floated Images</title>
     <style>
         body 
         {
             font-family: Arial, Helvetica, sans-serif;
-            background-color: lightblue;
         }
         h1, h2 h3
         {
@@ -24,7 +23,7 @@
             line-height: 1.7;
             color: #333;
             padding: 1rem;
-            border: 1px solid black;
+            border: 1px solid silver;
         }
 
         img.centerimage
@@ -34,23 +33,20 @@
             margin: auto;
         }
 
-        figure.rightimage
+        img.rightimage
         {
             max-width: 60%;
             height: auto;
             float: right;
             margin: 1rem;
+            box-shadow: 2px 2px 2px 2px black;
         }
-        figure.leftimage
+        img.leftimage
         {
             max-width: 60%;
             height: auto;
             float: left;
             margin: 1rem;
-        }
-        main img
-        {
-            max-width: 100%;
             box-shadow: 2px 2px 2px 2px black;
         }
         figure
@@ -61,19 +57,12 @@
         {
             text-align: center;
         }
-        /* Clear the Floated Images */
-        .clearfix::after
-        {
-            content: "";
-            display: table;
-            clear: both;
-        }
     </style>
 </head>
 <body>
     <div id="wrapper">
-        <main class="clearfix">
-            <h1>Centered Images</h1>
+        <main>
+            <h1>Floated Images</h1>
 
             <figure> 
                 <img  class="centerimage" src="Images/mainkeyboard.png" alt="A Computer Keyboard Logitech A5000" >
@@ -82,8 +71,8 @@
 
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid dolor corrupti distinctio qui officia tempora eos ut nemo. Accusamus quod quaerat, mollitia quia voluptatibus eos voluptatum vitae amet minus adipisci odit quas dolor earum facilis labore, eveniet consequuntur aliquid praesentium qui. Velit est numquam amet, fuga vel et provident! Qui cumque impedit quo cum eius quidem optio numquam, officiis sequi?</p>
 
-            <figure class="rightimage">
-                <img  src="images/mainimage1code.png" alt="A screen with code">
+            <figure>
+                <img class="centerimage" src="images/mainimage1code.png" alt="A screen with code">
                 <figcaption>Code on Linux</figcaption>
             </figure>
 
@@ -91,9 +80,9 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid dolor corrupti distinctio qui officia tempora eos ut nemo. Accusamus quod quaerat, mollitia quia voluptatibus eos voluptatum vitae amet minus adipisci odit quas dolor earum facilis labore, eveniet consequuntur aliquid praesentium qui. Velit est numquam amet, fuga vel et provident! Qui cumque impedit quo cum eius quidem optio numquam, officiis sequi?</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid dolor corrupti distinctio qui officia tempora eos ut nemo. Accusamus quod quaerat, mollitia quia voluptatibus eos voluptatum vitae amet minus adipisci odit quas dolor earum facilis labore, eveniet consequuntur aliquid praesentium qui. Velit est numquam amet, fuga vel et provident! Qui cumque impedit quo cum eius quidem optio numquam, officiis sequi?</p>
 
-            <figure class="leftimage">
-                <img src="images/mainimage2code.png" alt="A screen with code" >
-                <figcaption>Code on Windows</figcaption>
+            <figure>
+                <img class="centerimage" src="images/mainimage2code.png" alt="A screen with code" >
+                <figcaption>Code om Windows</figcaption>
             </figure>
 
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid dolor corrupti distinctio qui officia tempora eos ut nemo. Accusamus quod quaerat, mollitia quia voluptatibus eos voluptatum vitae amet minus adipisci odit quas dolor earum facilis labore, eveniet consequuntur aliquid praesentium qui. Velit est numquam amet, fuga vel et provident! Qui cumque impedit quo cum eius quidem optio numquam, officiis sequi?</p>
@@ -102,5 +91,44 @@
 
 
 
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clearfix - Pseuodo Elements</title>
+    <style>
+    #myheader
+    {
+        background-color:crimson;
+        width:max-content;
+        position: relative;
+    }
+    #myheader::before
+    {
+        content: "x";
+        height:4px;
+        width: 100%;
+        background-color: green;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    #myheader::after
+    {
+        content: "";
+        height:4px;
+        width: 100%;
+        background-color: blue;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    </style>
+</head>
+<body>
+    <h1 id="myheader">My Header One</h1>
 </body>
 </html>
