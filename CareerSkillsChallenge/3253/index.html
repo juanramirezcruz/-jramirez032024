@@ -4,8 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Central Valley Pets</title>
+    <style>
+        body
+        {
+            background-color: none;
+            padding: 1rem;
+        }
+        #container
+        {
+            max-width: 1200px;
+            background-color: #feefd9;
+            margin: auto;
+            border: 1px solid black;
+        }
+        #wrapper
+        {
+            background-color:black;
+            width: 100%;
+            margin: auto;
+            display: grid;
+            grid-template-areas:
+            "hea hea hea hea"
+            "nav nav nav nav"
+            "mai mai mai mai"
+            "asi asi asi asi"
+            "foo foo foo foo"
+            ;
+        }
+        header{
+            background-color: salmon;
+            min-height:35rem;
+            padding:1rem;
+            grid-area: hea;
+    }
+        nav
+        {
+            background-color: lavender;
+            min-height:2rem;
+            padding:1rem;
+            grid-area: nav;
+        }
+        main
+        {
+            background-color: white;
+            min-height: 50rem;
+            padding: 1rem;
+            grid-area: mai;
+        }
+        aside
+        {
+            background-color: teal;
+            min-height: 20rem;
+            padding: 1rem;
+            grid-area: asi;
+        }
+        footer
+        {
+            background-color: gold;
+            min-height: 10rem;
+            padding: 1rem;
+            grid-area: foo;
+        }
+        @media screen and (min-width:760px)
+        {
+        #wrapper
+            {
+                background-color: none;
+                width: 100%;
+                margin: auto;
+                display: grid;  
+                grid-template-areas:
+                "hea hea hea hea"
+                "nav nav nav nav"
+                "mai mai mai asi"
+                "foo foo foo foo"
+                ;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="container">
+        <div id="wrapper">
+            <header>Header</header>
+            <nav>Nav</nav>
+            <main>Main</main>
+            <aside>Aside</aside>
+            <footer>Footer</footer>
+        </div>
+    </div>
 </body>
 </html>
