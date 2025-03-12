@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facts</title>
+    <style>
+        body
+        {
+            background-image: url(Images/mars.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            padding: 1rem;
+        }
+        h2
+        {
+            text-align: center;
+            font-size:2rem;
+        }
+        p
+        {
+            font-size:1.2rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+            line-height: 1.7;
+        }
+        #container
+        {
+            max-width: 1200px;
+            background-color: #260101;
+            margin: auto;
+            border: 1px solid black;
+        }
+        #wrapper
+        {
+            background-color: none;
+            width: 100%;
+            margin: auto;
+            display: grid;   
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-areas: 
+            "hea hea hea hea"
+            "nav nav nav nav"
+            "mai mai mai mai"
+            "asi asi asi asi"
+            "foo foo foo foo"
+            ;
+        }
+        header
+        {
+            background-image: url(Images/donations.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            text-align: center;
+            color: white;
+            font-size: 3rem;
+            text-shadow: 5px 5px black;
+            min-height:20rem;
+            padding:1rem;
+            border: 1px solid black;
+            grid-area: hea;
+        }
+        nav
+        {
+            background-color: #D95407;
+            min-height:1rem;
+            text-align: center;
+            color: white;
+            padding:1rem;
+            border: 1px solid black;
+            grid-area: nav;
+        }
+        nav a 
+        {
+            color: white;
+            text-shadow: 1px 1px black;
+        }
+        nav a:hover
+        {
+            color:#BF2604;
+        }
+        main
+        {
+            background-color: #BF2604;
+            min-height: 50rem;
+            padding: 1rem;
+            border: 1px solid black;
+            grid-area: mai;
+        }
+        aside
+        {
+            background-color: #A62103;
+            min-height: 20rem;
+            padding: 1rem;
+            border: 1px solid black;
+            grid-area: asi;
+        }
+        #img1
+        {
+            background-image: url(Images/download\ \(1\).jpeg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            margin: auto;
+        }
+        #img2
+        {
+            background-image: url(Images/image.jpeg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            margin: auto;
+            margin-top: 20px;
+        }
+        #img3
+        {
+            background-image: url(Images/download.jpeg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            margin: auto;
+            margin-top: 20px;
+        }
+        footer
+        {
+            background-color: #8C0E03;
+            min-height: 6rem;
+            padding: 1rem;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px black;
+            border: 1px solid black;
+            grid-area: foo;
+        }
+        @media screen and (min-width:762px)
+        {
+        #wrapper
+            {
+                background-color: none;
+                width: 100%;
+                margin: auto;
+                display: grid;  
+                grid-template-areas:
+                "hea hea hea hea"
+                "nav nav nav nav"
+                "mai mai mai asi"
+                "foo foo foo foo"
+                ;
+            }
+        aside
+            {
+                width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="wrapper">
+            <header>
+                <h1>Facts</h1>
+            </header>
+            <nav>
+                <a href="index.html">Journey to Mars</a>
+                | 
+                <a href="planetaryresources.html">Planetary Resources</a>
+                | 
+                <a href="facts.html">Facts</a>
+                | 
+                <a href="mep.html">MEP</a>
+                | 
+                <a href="whymars.html">Why Mars?</a>
+                | 
+                <a href="donations.html">Donations</a>
+            </nav>
+            <main>
+                <h2>Journey to Mars: A New Frontier</h2>
+                <p>For centuries, humanity has looked up at the night sky in wonder, dreaming of what lies beyond our own planet. Now, that dream is becoming a reality. The journey to Mars represents the next great step in human exploration, pushing the boundaries of science, technology, and our very existence. As we prepare for this bold adventure, we are not just aiming to set foot on another planet—we are laying the foundation for a future where humans can live, work, and thrive beyond Earth.</p>
+                <p>Mars has long fascinated scientists and explorers alike. With its vast deserts, towering volcanoes, and deep canyons, the Red Planet holds secrets that could help us better understand our own world and the possibilities of life elsewhere in the universe. While its surface is harsh, with freezing temperatures and a thin atmosphere, it also has resources that could support human life, such as water ice and essential minerals. By studying Mars, we gain insight into our solar system’s past and take the first steps toward becoming an interplanetary species.</p>
+                <p>Getting to Mars is no small feat. The journey will take around six to nine months, requiring astronauts to live in a spacecraft for an extended period, facing challenges like radiation exposure, isolation, and limited supplies. Once there, they will need to build shelters, generate oxygen, grow food, and create sustainable systems to survive. But these challenges drive innovation, inspiring new technologies that could one day benefit life on Earth as well. Advances in energy production, medicine, robotics, and artificial intelligence will all play a role in making Mars habitable, and many of these breakthroughs will improve life here on our home planet, too.                </p>
+                <p>Beyond the technical challenges, the mission to Mars represents something even greater—a symbol of human perseverance, curiosity, and the desire to explore the unknown. Just as past explorers ventured across uncharted seas and continents, we now stand at the edge of a new frontier. This journey will unite scientists, engineers, and dreamers from around the world, working together to accomplish what was once thought impossible. The first humans to step onto Martian soil will not just be making history; they will be paving the way for future generations to explore even deeper into space.                </p>
+                <p>Mars is not just our next destination—it is the beginning of a new chapter in human civilization. The dream of a self-sustaining colony on another planet may seem like science fiction today, but with every new discovery and technological advancement, it becomes more of a reality. In the coming years, robotic missions, space stations, and eventually human settlements will transform Mars from a distant world into a second home for humanity.                </p>
+                <p>The journey to Mars is a challenge unlike any before, but it is one worth taking. It represents hope, progress, and the belief that we are capable of more than we ever imagined. As we prepare for this monumental leap, we are reminded that the human spirit is defined by its drive to explore, to discover, and to push beyond the limits of what we know. Mars is calling, and soon, we will answer.                </p>
+            </main>
+            <aside>
+                <div id="img1"></div>
+                <div id="img2"></div>
+                <div id="img3"></div>
+            </aside>
+            <footer>
+                <h3>© Career Skills Challenge 2025</h3>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
