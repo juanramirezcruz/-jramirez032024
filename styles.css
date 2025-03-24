@@ -1,0 +1,334 @@
+/* Mobile First Design */
+    :root
+    {
+        --color-primary: #162c60;
+        --color-secondary: #093177;
+        --color-tertiary: #204791;
+    }
+
+    html
+    {
+        scroll-behavior: smooth;
+    }
+
+    body   
+    {
+        font-family:var (--font-primary);
+        padding:0;
+        margin:0;
+    }
+
+    .container
+    {
+        background-color: #590105;
+        min-height:10rem;
+        max-width:75rem;
+        padding:1rem 3rem 1rem 3rem;
+        margin:auto;
+        border-radius:35px;
+        border:5px solid white;
+    }
+
+    #pageheader 
+    {
+        background-color: #590105;
+        min-height:200px;
+        padding:1rem;
+    }
+
+
+
+    #pagenav    
+    {
+        background-color: #193473;
+        min-height:30px;
+        padding:1rem;
+        text-align: center;
+        color: white;
+    }
+
+    #pagenav a 
+    {
+        color: white;
+    }
+
+    #pagenav a:hover
+    {
+        color: #8f363c;
+    }
+
+    #logo
+    {
+        background-color: red;
+        width:150px;
+        height:150px;
+        border-radius: 50%;
+        background-image: url(Images/logo.jpg); 
+        background-size:cover;
+        border:5px solid white;
+        position:absolute;
+        left:calc(50% - 75px);
+        transition: all 2s;
+        background-repeat: no-repeat;
+        background-position: center center;
+        animation:spin 3s infinite linear;
+    }
+
+    @keyframes spin 
+    {
+        100%{transform: rotate(1turn);}
+    }
+
+    #topnav    
+    {
+        background-color: #193473;
+        min-height:30px;
+        padding:1rem;
+        text-align: center;
+        color: white;
+    }
+
+    #topnav a 
+    {
+        color: white;
+    }
+
+    #topnav a:hover
+    {
+        color: #8f363c;
+    }
+
+
+    #media
+    {
+        background-color: #16293d;
+        min-height:350px;
+        padding:1rem;
+        background-image: url(Images/spiderman.jpg);
+        background-size:cover;
+        background-position: center top;
+        transition: 2s;
+    }
+
+    #career
+    {
+        background-color: #334f71;
+        min-height:200px;
+        padding:1rem;
+        color:white;
+    }
+
+    #career .container:hover
+    {
+        box-shadow:0px 10px 30px 10px #99c0d7;
+        transition: 0.6s;
+        transform: translateY(-15px);
+    }
+
+    #career a
+    {
+        color:white;
+    }
+
+    #career a:hover
+    {
+        color:#82a7c0;
+    }
+
+    #introduction
+    {
+        background-color:var(--color-primary);
+        min-height:200px;
+        padding:1rem;
+        color:white;
+    }
+
+    #introduction .container:hover
+    {
+        box-shadow:0px 10px 30px 10px #99c0d7;
+        transition: 0.6s;
+        transform: translateY(-15px);
+    }
+
+    #keyassignments
+    {
+        background-color:var(--color-primary);
+        min-height:200px;
+        padding:1rem;
+        color:white;
+
+    }
+
+    #keyassignments .container:hover
+    {
+        box-shadow:0px 10px 30px 10px #99c0d7;
+        transition: 0.6s;
+        transform: translateY(-15px);
+    }
+
+
+    #semester2
+    {
+        background-color:var(--color-primary);
+        min-height:200px;
+        padding:1rem;
+        color:white;
+    }
+
+    #semester2 .container:hover
+    {
+        box-shadow:0px 10px 30px 10px #99c0d7;
+        transition: 0.6s;
+        transform: translateY(-15px);
+    }
+
+    #semester2 a
+    {
+        color:white;
+    }
+
+    #semester2 a:hover
+    {
+        color:#82a7c0;
+    }
+
+    #pagefooter
+    {
+        background-color:var(--color-secondary);
+        min-height:200px;
+        padding:1rem;
+        text-align: center;
+        color: white;
+    }
+
+    #pagefooter a
+    {
+        color: white;
+    }
+
+    #pagefooter a:hover
+    {    
+        color:#82a7c0;
+    }
+
+    #pagefooter .container:hover
+    {
+        box-shadow:0px 10px 30px 10px #99c0d7;
+        transition: 0.6s;
+        transform: translateY(-15px);
+    }
+
+    #subfooter
+    {
+        background-color:var(--color-tertiary);
+        min-height:200px;
+        padding:1rem;
+        color:white;
+    }
+
+    #subfooter .container:hover
+    {
+        box-shadow:0px 10px 30px 10px #99c0d7;
+        transition: 0.6s;
+        transform: translateY(-15px);
+    }
+
+    #topanchor
+    {
+        height:25px;
+        width: 25px;
+        padding: 1rem;
+        border: 2px solid white;
+        border-radius: 50%;
+        position: fixed;
+        right: 20px;
+        bottom:20px;
+        background-color: #590105;
+    
+    }
+
+    #topanchor a
+    {
+        color: white;
+    }
+    #topanchor a:hover
+    {    
+        color:#82a7c0;
+    }
+
+    #footerlinks
+    {
+        display:none;
+    }
+    #footerlinks a
+    {
+        color:white;
+    }
+    #footerlinks a:hover
+    {    
+        color:#82a7c0;
+    }
+
+/* Table and Desktop Styles */
+/* Use media queries to detect browser window size */
+
+    @media screen and (min-width:321px)
+    {
+        #career 
+        {
+            background-color: #1e1c1b;
+        }
+    }
+
+    @media screen and (min-width:480px)
+    {
+        #career
+        {
+            background-color: #204791;
+        }
+    }
+
+    @media screen and (min-width:768px)
+    {
+        #flexsubfooter
+        {
+            display: flex;
+            justify-content: space-between;
+        }
+        #career 
+        {
+            background-color:  #093177;
+        }
+        #footerlinks
+        {
+            display:block;
+        }
+
+    @media screen and (min-width:1024px)
+    {
+        #career
+        {
+            background-color:#162c60;
+        }
+        #logo
+        { 
+            left :25px;
+        }
+    }
+
+    @media screen and (min-width:1200px)
+    {
+        #career 
+        {
+            background-color: #08255e;
+        }
+        #logo   
+        {
+            left :25px; 
+        }
+        #media 
+        {
+            height: 600px;
+        }
+    }
+    }
