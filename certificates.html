@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juan Ramirez - Certificates</title> 
-    <link rel="stylesheet" href="styles.css">
+    <link id="stylelink" rel="stylesheet" href="styles.css">
     <style>
         iframe
         {
@@ -28,6 +28,13 @@
                 <div id="logo"></div>
             </a>                
             <div id="spiderman"></div>
+            <div id="buttonthingy">
+                <select name="selstylesheet" id="selstylesheet" onchange="updateStylesheet()">
+                    <option value="styles.css">Spiderman Theme</option>
+                    <option value="wolverinestyles.css">Wolverine Theme</option>
+                    <option value="hulkstyles.css">Hulk Theme</option>
+                </select>
+            </div>
         </header>
     <!-- end pageheader -->
     
@@ -113,6 +120,16 @@
             function refresh()
             {
                 window.location.reload(true);
+            }
+        </script>
+        <script>
+            function updateStylesheet()
+            {   
+                let selStylesheet = document.querySelector('#selstylesheet');
+                let styleLink = document.querySelector('#stylelink');
+                // Test
+                //alert(selStylesheet.value);
+                stylelink.href = selStylesheet.value
             }
         </script>
     </body>

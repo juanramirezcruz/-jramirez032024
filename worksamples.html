@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juan Ramirez - Work Samples</title> 
-    <link rel="stylesheet" href="styles.css">
+    <link id="stylelink" rel="stylesheet" href="styles.css">
     <style>
         iframe
         {
@@ -14,6 +14,14 @@
             display: block;
             margin: auto;
             border: 2px solid black;
+        }
+        #pagemain a
+        {
+        color:white;
+        }
+        #pagemain a:hover
+        {
+        color:#82a7c0;
         }
     </style>
 </head>
@@ -28,6 +36,13 @@
                 <div id="logo"></div>
             </a>                
             <div id="spiderman"></div>
+            <div id="buttonthingy">
+                <select name="selstylesheet" id="selstylesheet" onchange="updateStylesheet()">
+                    <option value="styles.css">Spiderman Theme</option>
+                    <option value="wolverinestyles.css">Wolverine Theme</option>
+                    <option value="hulkstyles.css">Hulk Theme</option>
+                </select>
+            </div>
         </header>
     <!-- end pageheader -->
     
@@ -50,16 +65,23 @@
             <div class="container">
                 <h2>Work Samples</h2>
                 <main id="pagemain">  
+                    <ul>
+                        <li><a href="#AP Spanish Education Plan">AP Spanish Education Plan</a></li>    
+                        <li><a href="#AP Spanish Summer Work">AP Spanish Summer Work</a></li>                                
+                        <li><a href="#CSI Serial Killer Essay">CSI Serial Killer Essay</a></li>                                
+                        <li><a href="#English 11 Short Answer Response">English 11 Short Answer Response</a></li>                        
+                        <li><a href="#Math 3 Acc Worksheet">Math 3 Acc Worksheet</a></li>                        
+                    </ul>
                     <h2>AP Spanish Education Plan</h2>
-                    <iframe src="WorkSamples/AP Spanish Education Plan.pdf" frameborder="0"></iframe>
+                    <iframe id="AP Spanish Education Plan" src="WorkSamples/AP Spanish Education Plan.pdf" frameborder="0"></iframe>
                     <h2>AP Spanish Summer Work</h2>
-                    <iframe src="WorkSamples/AP Spanish Summer Work.pdf" frameborder="0"></iframe>
+                    <iframe id="AP Spanish Summer Work" src="WorkSamples/AP Spanish Summer Work.pdf" frameborder="0"></iframe>
                     <h2>CSI Serial Killer Essay</h2>
-                    <iframe src="WorkSamples/CSI Serial Killer Essay.pdf" frameborder="0"></iframe>
+                    <iframe id="CSI Serial Killer Essay" src="WorkSamples/CSI Serial Killer Essay.pdf" frameborder="0"></iframe>
                     <h2>English 11 Short Answer Response</h2>
-                    <iframe src="WorkSamples/English 11 Short Answer Response.pdf" frameborder="0"></iframe>
+                    <iframe id="English 11 Short Answer Response" src="WorkSamples/English 11 Short Answer Response.pdf" frameborder="0"></iframe>
                     <h2>Math 3 Acc Worksheet</h2>
-                    <iframe src="WorkSamples/Math 3 Acc Worksheet.pdf" frameborder="0"></iframe>
+                    <iframe id="Math 3 Acc Worksheet" src="WorkSamples/Math 3 Acc Worksheet.pdf" frameborder="0"></iframe>
             </div>
         </main>
     <!-- end pagecontent -->
@@ -120,6 +142,16 @@
             function refresh()
             {
                 window.location.reload(true);
+            }
+        </script>
+        <script>
+            function updateStylesheet()
+            {   
+                let selStylesheet = document.querySelector('#selstylesheet');
+                let styleLink = document.querySelector('#stylelink');
+                // Test
+                //alert(selStylesheet.value);
+                stylelink.href = selStylesheet.value
             }
         </script>
     </body>

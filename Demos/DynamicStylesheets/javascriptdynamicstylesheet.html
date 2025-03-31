@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Stylesheets</title>
+
+    <link id="stylelink" rel="stylesheet" href="redstyles.css">
+
+</head>
+<body>
+    <h1>Dynamic Stylesheets</h1>
+
+    <button onclick="changeStylesheet()">Blue Theme</button>
+
+    <select name="selstylesheet" id="selstylesheet" onchange="updateStylesheet()">
+        <option value="redstyles.css">Red Theme</option>
+        <option value="bluestyles.css">Blue Theme</option>
+        <option value="greenstyles.css">Green Theme</option>
+    </select>
+
+    <script>
+        // Dynamic Stylesheets
+        function changeStylesheet()
+        {
+            // Create variable for the link object
+            let styleLink;
+            styleLink = document.querySelector('#stylelink');
+
+            // Test
+            //alert(stylelink);
+
+            styleLink.href="bluestyles.css";
+
+        }
+
+        function updateStylesheet()
+        {   
+            let selStylesheet = document.querySelector('#selstylesheet');
+            let styleLink = document.querySelector('#stylelink');
+            // Test
+            //alert(selStylesheet.value);
+            stylelink.href = selStylesheet.value
+        }
+    </script>
+</body>
+</html>
