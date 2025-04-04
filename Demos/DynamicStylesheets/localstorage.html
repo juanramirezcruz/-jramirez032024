@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+    <style>
+        h1
+        {
+            color: white;
+            background-color: blue;
+            padding: 1rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Local Storage</h1>
+
+    <script>
+        // Create variable
+        let teacher;
+
+        // Create object-
+        teacher = 
+        {
+            name: "Manuel Chagoyan",
+            class: "Technology",
+            school: "Coalinga High School",
+        };
+
+        //alert(teacher.class);
+        
+        // Save to localStorage
+        localStorage.setItem("name", teacher.name);
+        localStorage.setItem("class", teacher.class);
+        localStorage.setItem("school", teacher.school);
+
+        // Add one more item
+        localStorage.setItem("year", "2025");
+
+        // Retrieve from localStorage
+        console.log(localStorage.getItem("name"));
+        console.log(localStorage.getItem("class")); 
+        console.log(localStorage.length);
+
+        let instructor = localStorage.getItem("name");
+        alert(instructor);
+    </script>
+
+</body>
+</html>
