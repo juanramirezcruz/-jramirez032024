@@ -147,6 +147,7 @@
         min-height:200px;
         padding:1rem;
         color:white;
+        line-height: 1.7;
     }
 
     #introduction .container:hover
@@ -162,6 +163,7 @@
         min-height:200px;
         padding:1rem;
         color:white;
+        line-height: 1.7;
 
     }
 
