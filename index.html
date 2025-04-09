@@ -112,7 +112,7 @@
 
     <!-- begin pagefooter -->
         <footer id="pagefooter">
-            <div class="container">
+            
                 
                 <a href="https://chsserver01.org/" target="new">chago</a> |
 
@@ -127,7 +127,7 @@
                 <a href="https://codepip.com/" target="new">codepip</a> |
 
                 <a href="https://app.minga.io/landing/email" target="new">minga</a> |
-            </div>
+            
         </footer>
     <!-- end pagefooter -->
 
@@ -160,14 +160,33 @@
         </div>
         
         <script>
-            function updateStylesheet()
-            {   
                 let selStylesheet = document.querySelector('#selstylesheet');
                 let styleLink = document.querySelector('#stylelink');
+
+            function updateStylesheet()
+            {   
+
                 // Test
                 //alert(selStylesheet.value);
                 stylelink.href = selStylesheet.value
+    
+                // Save to local storage 
+                localStorage.setItem('style3253', selStylesheet.value);
             }
+    
+            window.addEventListener('load', function() {
+                //alert("Welcome Back!");
+                // Get local storage data
+                let savedStylesheet = localStorage.getItem('style3253');
+    
+                //alert(savedStylesheet);
+    
+                if(savedStylesheet !== null)
+                {
+                    stylelink.href = savedStylesheet; // Update the link tag to the saved stylesheet
+                    selStylesheet.value = savedStylesheet; // Update the select dropdown
+                }
+            });
         </script>
     </body>
 </html>

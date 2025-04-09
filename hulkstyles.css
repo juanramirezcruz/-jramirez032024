@@ -203,7 +203,7 @@
         #pagefooter
         {
             background-color:var(--color-secondary);
-            min-height:200px;
+            min-height:30px;
             padding:1rem;
             text-align: center;
             color: white;
@@ -214,7 +214,7 @@
         }
         #pagefooter a:hover
         {    
-            color:#82a7c0;
+            color:#487334;
         }
         #pagefooter .container:hover
         {
